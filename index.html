@@ -9,7 +9,7 @@
   </head>
   <body class="font-sans font-semibold text-cyan-950 bg-cyan-50 justify-center">
     <header
-      class="py-10 font-bold tracking-wide text-center text-cyan-800 uppercase bg-cyan-100"
+      class="py-5 font-bold tracking-wide text-center text-cyan-800 uppercase bg-cyan-100"
     >
       <h1 class="sm:text-xl md:text-2xl lg:text-3xl">
         Name the Fantasy Book from the Map
@@ -20,20 +20,21 @@
         How well do you know your favourite fantasy worlds?
       </h2>
     </header>
-    <main class="container flex justify-center py-10 px-100">
+    <main class="py-10">
       <form id="quizform">
         <div
           id="QuestionOne"
-          class="block rounded-lg bg-white"
+          class="grid grid-cols-12 block rounded-lg bg-white"
         >
-          <div>
+        <!-- image container -->
+          <div class="container h-[60vh] col-span-12 md:col-span-8">
             <img
-              class="rounded-t-lg "
+              class="h-full w-full object-cover object-center rounded-t-lg "
               src="\images\inkWorldMap.jpg"
               alt="inked world map"
             />
           </div>
-          <div class="p-6 text-surface dark:text-white">
+          <div class="col-span-12 md:col-span-4 p-6 text-surface dark:text-white">
             <h5 class="mb-2 text-xl font-medium leading-tight">
               Which book does this fantasy world come from?
             </h5>
