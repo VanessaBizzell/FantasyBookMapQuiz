@@ -1,4 +1,5 @@
 function questionOne() {
+    document.getElementById("intro").style.display = "none";
     document.getElementById("questionOne").style.display = "flex";
     document.getElementById("questionTwo").style.display = "none";
     document.getElementById("questionThree").style.display = "none";

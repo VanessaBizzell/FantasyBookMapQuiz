@@ -22,6 +22,35 @@
     </header>
     <main class="py-10">
       <form id="quizform">
+
+      <!-- Intro -->
+        <div
+          id="intro"
+          class="grid grid-cols-12 block rounded-lg bg-white"
+        >
+          <div class="container h-[60vh] col-span-12 md:col-span-8">
+            <img
+              class="h-full w-full object-cover object-center rounded-t-lg"
+              src="\images\inkWorldMap.jpg"
+              alt="map of Narnia"
+            />
+          </div>
+          <div class="col-span-12 md:col-span-4 p-6 text-surface">
+            <h5 class="mb-2 text-lg md:text-xl font-semibold md:font-bold">
+              Match the map of a fantasy fictional world to the book and author.
+            </h5>
+            
+            <div class="flex justify-center pt-5">
+              <button
+                onclick="questionOne()"
+                class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
+              >
+                Start Quiz
+              </button>
+            </div>
+          </div>
+        </div>
+
         <!--question 1-->
         <div
           id="questionOne"
@@ -82,6 +111,7 @@
           </div>
         </div>
 
+       
         <!-- question 2-->
         <div
           id="questionTwo"
