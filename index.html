@@ -4,30 +4,386 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fantasy Book Map Quiz</title>
+    <script src="\quizCode.js" type="text/javascript"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="index.css" />
   </head>
-  <body class="font-sans font-semibold text-cyan-950 bg-rose-700">
-    <header class="py-10 font-bold tracking-wide text-3xl text-center text-cyan-800 uppercase bg-cyan-50 ">
-      <h1>Name the Fantasy Book from the Map</h1>
-      <h2 class="text-xl font-semibold capitalize italic">How well do you know your favourite fantasy worlds?</h2>
+  <body class="font-sans font-normal text-cyan-950 bg-cyan-50 justify-center">
+    <header
+      class="py-5 font-bold md:font-extrabold tracking-wide text-center text-cyan-800 uppercase bg-cyan-100"
+    >
+      <h1 class="sm:text-xl md:text-2xl lg:text-3xl">
+        Name the Fantasy Book from the Map
+      </h1>
+      <h2
+        class="sm:text-lg md:text-normal lg:text-xl font-semibold capitalize italic"
+      >
+        How well do you know your favourite fantasy worlds?
+      </h2>
     </header>
-    <main class="container mx-auto h-6/8 px-15 py-10 bg-white ">
-      <section id="mapOne">
-      <!-- map image and question here
-      multiple choice book and author - 33 options min -->
-      <div class="flex items-center">
-      <button class="mx-auto text-center text-xl font-bold bg-rose-500 border-4 border-rose-800 hover:bg-rose-200 hover:text-cyan-600 py-3 px-5 mt-5 rounded-full shadow-xl">
-        Next Map
-      </button>
-      </div>
-    </section> 
-     
+    <main class="py-10">
+      <form id="quizform">
 
+      <!-- Intro -->
+        <div
+          id="intro"
+          class="grid grid-cols-12 block rounded-lg bg-white"
+        >
+          <div class="container h-[60vh] col-span-12 md:col-span-8">
+            <img
+              class="h-full w-full object-cover object-center rounded-t-lg"
+              src="\images\inkWorldMap.jpg"
+              alt="map of Narnia"
+            />
+          </div>
+          <div class="col-span-12 md:col-span-4 p-6 text-surface">
+            <h5 class="mb-2 text-lg md:text-xl font-semibold md:font-bold">
+              Match the map of a fantasy fictional world to the book and author.
+            </h5>
+            
+            <div class="flex justify-center pt-5">
+              <button id="moveQ1"
+              type="button"
+              onclick="moveOnto1()"
+              class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
+              >
+                Start Quiz
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--question 1-->
+        <div
+          id="questionOne"
+          class="invisible grid grid-cols-12  block rounded-lg bg-white"
+        >
+          <div class="container h-[60vh] col-span-12 md:col-span-8">
+            <img
+              class="h-full w-full object-cover object-center rounded-t-lg"
+              src="\images\mordorRing.jpg"
+              alt="mordor map with gold ring"
+            />
+          </div>
+          <div class="col-span-12 md:col-span-4 p-6 text-surface">
+            <h5 class="mb-2 text-lg md:text-xl font-semibold md:font-bold">
+              Which book does this fantasy world come from?
+            </h5>
+
+              <div class="row justify-content-center">
+                <h2 class="text-left font-semibold md:font-bold">
+                  Pick a book and author combo:
+                </h2>
+              </div>
+              <div class="row"></div>
+              <div class="row justify-content-center pt-1">
+                <input type="radio" name="quest1" id="a1" value="0" />
+                <label for="a1" class="text-center"
+                  >"Wizard of Oz" by L. Frank Baum</label
+                >
+              </div>
+              <div class="row justify-content-center pt-1">
+                <input type="radio" name="quest1" id="a2" value="1" />
+                <label for="a2">"The Hobbit" by JRR Tolkien</label>
+              </div>
+              <div class="row justify-content-center pt-1">
+                <input type="radio" name="quest1" id="a3" value="0" />
+                <label for="a3"
+                  >"The Lion, The Witch & The Wardrobe" by CS Lewis</label
+                >
+              </div>
+              <div class="row justify-content-center pt-1">
+                <input type="radio" name="quest1" id="a4" value="0" />
+                <label for="a3">"Soul Music" by Terry Pratchett</label>
+              </div>
+              <div class="row justify-content-center pt-1">
+                <input type="radio" name="quest1" id="a5" value="0" />
+                <label for="a3"
+                  >"How to Train your Dragon" by Cressida Cowell</label
+                >
+              </div>
+              <div class="flex justify-center pt-5">
+                <button 
+                  id="moveQ2"
+                  type="button"
+                  onclick="moveOnto2()"
+                  class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
+                >
+                  Next Map
+                </button>
+              </div>
+          </div>
+        </div>
+
+       
+        <!-- question 2-->
+        <div
+          id="questionTwo"
+          class="invisible grid grid-cols-12 block rounded-lg bg-white"
+        >
+          <div class="container h-[60vh] col-span-12 md:col-span-8">
+            <img
+              class="h-full w-full object-cover object-center rounded-t-lg"
+              src="\images\narniaMap.jpg"
+              alt="map of Narnia"
+            />
+          </div>
+          <div class="col-span-12 md:col-span-4 p-6 text-surface">
+            <h5 class="mb-2 text-lg md:text-xl font-semibold md:font-bold">
+              Which book does this fantasy world come from?
+            </h5>
+
+            
+            <div class="row justify-content-center">
+              <h2 class="text-left font-semibold md:font-bold">
+                Pick a book and author combo:
+              </h2>
+            </div>
+            <div class="row"></div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest2" id="a1" value="0" />
+              <label for="a1" class="text-center"
+                >"Wizard of Oz" by L. Frank Baum</label
+              >
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest2" id="a2" value="0" />
+              <label for="a2">"The Hobbit" by JRR Tolkien</label>
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest2" id="a3" value="1" />
+              <label for="a3"
+                >"The Lion, The Witch & The Wardrobe" by CS Lewis</label
+              >
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest2" id="a4" value="0" />
+              <label for="a3">"Soul Music" by Terry Pratchett</label>
+              <div class="row justify-content-center pt-1">
+                <input type="radio" name="quest2" id="a5" value="0" />
+                <label for="a3"
+                  >"How to Train your Dragon" by Cressida Cowell</label
+                >
+              </div>
+            </div>
+            <div class="flex justify-center pt-5">
+              <button id="moveQ3"
+                type="button"
+                onclick="moveOnto3()"
+                class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
+              >
+                Next Map
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- question 3-->
+        <div
+          id="questionThree"
+          class="invisible grid grid-cols-12 block rounded-lg bg-white"
+        >
+          <div class="container h-[60vh] col-span-12 md:col-span-8">
+            <img
+              class="h-full w-full object-cover object-center rounded-t-lg"
+              src="\images\ioBerkMAp.webp"
+              alt="hand drawn map of Isle of Berk"
+            />
+          </div>
+          <div class="col-span-12 md:col-span-4 p-6 text-surface">
+            <h5 class="mb-2 text-lg md:text-xl font-semibold md:font-bold">
+              Which book does this fantasy world come from?
+            </h5>
+            <div" class="mx-auto">
+            <div class="row justify-content-center">
+              <h2 class="text-left font-semibold md:font-bold">
+                Pick a book and author combo:
+              </h2>
+            </div>
+            <div class="row"></div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest3" id="a1" value="0" />
+              <label for="a1" class="text-center"
+                >"Wizard of Oz" by L. Frank Baum</label
+              >
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest3" id="a2" value="0" />
+              <label for="a2">"The Hobbit" by JRR Tolkien</label>
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest3" id="a3" value="0" />
+              <label for="a3"
+                >"The Lion, The Witch & The Wardrobe" by CS Lewis</label
+              >
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest3" id="a4" value="0" />
+              <label for="a3">"Soul Music" by Terry Pratchett</label>
+              <div class="row justify-content-center pt-1">
+                <input type="radio" name="quest3" id="a5" value="1" />
+                <label for="a3"
+                  >"How to Train your Dragon" by Cressida Cowell</label
+                >
+              </div>
+            </div>
+            <div class="flex justify-center pt-5">
+              <button 
+                id="moveQ4"
+                type="button"
+                onclick="moveOnto4()"
+                class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
+              >
+                Next Map
+              </button>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- question 4-->
+        <div
+          id="questionFour"
+          class="invisible grid grid-cols-12 block rounded-lg bg-white"
+        >
+          <div class="container h-[60vh] col-span-12 md:col-span-8">
+            <img
+              class="h-full w-full object-cover object-center rounded-t-lg"
+              src="\images\OzMap.webp"
+              alt="hand drawn map of Isle of Berk"
+            />
+          </div>
+          <div class="col-span-12 md:col-span-4 p-6 text-surface">
+            <h5 class="mb-2 text-lg md:text-xl font-semibold md:font-bold">
+              Which book does this fantasy world come from?
+            </h5>
+            <div" class="mx-auto">
+            <div class="row justify-content-center">
+              <h2 class="text-left font-semibold md:font-bold">
+                Pick a book and author combo:
+              </h2>
+            </div>
+            <div class="row"></div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest4" id="a1" value="1" />
+              <label for="a1" class="text-center"
+                >"Wizard of Oz" by L. Frank Baum</label
+              >
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest4" id="a2" value="0" />
+              <label for="a2">"The Hobbit" by JRR Tolkien</label>
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest4" id="a3" value="0" />
+              <label for="a3"
+                >"The Lion, The Witch & The Wardrobe" by CS Lewis</label
+              >
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest4" id="a4" value="0" />
+              <label for="a3">"Soul Music" by Terry Pratchett</label>
+              <div class="row justify-content-center pt-1">
+                <input type="radio" name="quest4" id="a5" value="0" />
+                <label for="a3"
+                  >"How to Train your Dragon" by Cressida Cowell</label
+                >
+              </div>
+            </div>
+            <div class="flex justify-center pt-5">
+              <button 
+                id="moveQ5"
+                type="button"
+                onclick="moveOnto5()"
+                class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
+              >
+                Next Map
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- question 5-->
+        <div
+          id="questionFive"
+          class="invisible grid grid-cols-12 block rounded-lg bg-white"
+        >
+          <div class="container h-[60vh] col-span-12 md:col-span-8">
+            <img
+              class="h-full w-full object-cover object-center rounded-t-lg"
+              src="\images\turtleMap.jpg"
+              alt="map of discworld held by turtle"
+            />
+          </div>
+          <div class="col-span-12 md:col-span-4 p-6 text-surface">
+            <h5 class="mb-2 text-lg md:text-xl font-semibold md:font-bold">
+              Which book does this fantasy world come from?
+            </h5>
+            <div" class="mx-auto">
+            <div class="row justify-content-center">
+              <h2 class="text-left font-semibold md:font-bold">
+                Pick a book and author combo:
+              </h2>
+            </div>
+            <div class="row"></div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest5" id="a1" value="0" />
+              <label for="a1" class="text-center"
+                >"Wizard of Oz" by L. Frank Baum</label
+              >
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest5" id="a2" value="0" />
+              <label for="a2">"The Hobbit" by JRR Tolkien</label>
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest5" id="a3" value="0" />
+              <label for="a3"
+                >"The Lion, The Witch & The Wardrobe" by CS Lewis</label
+              >
+            </div>
+            <div class="row justify-content-center pt-1">
+              <input type="radio" name="quest5" id="a4" value="1" />
+              <label for="a3">"Soul Music" by Terry Pratchett</label>
+              <div class="row justify-content-center pt-1">
+                <input type="radio" name="quest5" id="a5" value="0" />
+                <label for="a3"
+                  >"How to Train your Dragon" by Cressida Cowell</label
+                >
+              </div>
+            </div>
+            <div class="flex justify-center pt-5">
+              <button 
+                id="moveResults"
+                type="button"
+                onclick="moveOntoResults()"
+                class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
+              >
+                Next Map
+              </button>
+            </div>
+          </div>
+        </div>     
+        
+        
+        <!--Results-->
+        <div id="results" class=" invisible mx-auto">
+          <h5 class="mb-2 text-center text-lg md:text-xl font-semibold md:font-bold uppercase">Results:</h2>
+          <p class="text-center text-normal md:text-lg font-normal md:font-semibold">Click to display your score.</p>
+
+        <div class="flex justify-center pt-5 pb-6">
+          <button 
+            class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
+            type="button"
+            onclick="calculateScore()">What is your score?
+          </button>
+        </div>
+
+          <p class="text-center text-normal md:text-lg font-normal md:font-semibold "
+          id="score"></p>
+
+
+      </form>
     </main>
-    <footer></footer>
-
-    
-    <script></script>
   </body>
 </html>
