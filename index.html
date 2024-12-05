@@ -368,10 +368,19 @@
         
         <!--Results-->
         <div id="results" class=" invisible mx-auto">
-          <h5 class="mb-2 text-lg md:text-xl font-semibold md:font-bold">Results:</h2>
-          <br /><br />
-          <p class="text-center" id="result"></p>
+          <h5 class="mb-2 text-center text-lg md:text-xl font-semibold md:font-bold uppercase">Results:</h2>
+          <p class="text-center text-normal md:text-lg font-normal md:font-semibold">Click to display your score.</p>
+
+        <div class="flex justify-center pt-5 pb-6">
+          <button 
+            class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
+            type="button"
+            onclick="getElementById('demo').innerHTML=Date()">What is your score?
+          </button>
         </div>
+
+          <p class="text-center text-normal md:text-lg font-normal md:font-semibold "
+          id="demo"></p>
 
 
       </form>

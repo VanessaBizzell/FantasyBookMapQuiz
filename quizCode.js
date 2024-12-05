@@ -55,6 +55,18 @@ const moveOntoResults = () => {
 // Results 
 
 
+
+
+const array = (a1, a2, a3, a4, a5) => {
+  for (let index = 0; index < array.length; index++) {
+    const score = array[index];
+    
+  }
+}
+console.log(score)
+
+
+
 // const price = 50;
 // const discountPer = 30;
 // const discountPrice = (price, discountPer) => {
