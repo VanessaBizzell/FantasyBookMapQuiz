@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fantasy Book Map Quiz</title>
+    <script src="\quizCode.js" type="text/javascript"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="index.css" />
   </head>
   <body class="font-sans font-normal text-cyan-950 bg-cyan-50 justify-center">
     <header
@@ -375,21 +375,15 @@
           <button 
             class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
             type="button"
-            onclick="getElementById('demo').innerHTML=Date()">What is your score?
+            onclick="calculateScore()">What is your score?
           </button>
         </div>
 
           <p class="text-center text-normal md:text-lg font-normal md:font-semibold "
-          id="demo"></p>
+          id="score"></p>
 
 
       </form>
     </main>
-
-    
-
-    <footer></footer>
-
-    <script src="\quizCode.js" type="text/javascript"></script>
   </body>
 </html>
