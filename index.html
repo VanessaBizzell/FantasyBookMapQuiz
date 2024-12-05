@@ -41,9 +41,10 @@
             </h5>
             
             <div class="flex justify-center pt-5">
-              <button
-                onclick="questionOne()"
-                class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
+              <button id="moveQ1"
+              type="button"
+              onclick="moveOnto1()"
+              class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
               >
                 Start Quiz
               </button>
@@ -54,7 +55,7 @@
         <!--question 1-->
         <div
           id="questionOne"
-          class="grid grid-cols-12  block rounded-lg bg-white"
+          class="invisible grid grid-cols-12  block rounded-lg bg-white"
         >
           <div class="container h-[60vh] col-span-12 md:col-span-8">
             <img
@@ -101,8 +102,10 @@
                 >
               </div>
               <div class="flex justify-center pt-5">
-                <button
-                  onclick="questionTwo()"
+                <button 
+                  id="moveQ2"
+                  type="button"
+                  onclick="moveOnto2()"
                   class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
                 >
                   Next Map
@@ -115,7 +118,7 @@
         <!-- question 2-->
         <div
           id="questionTwo"
-          class="grid grid-cols-12 block rounded-lg bg-white"
+          class="invisible grid grid-cols-12 block rounded-lg bg-white"
         >
           <div class="container h-[60vh] col-span-12 md:col-span-8">
             <img
@@ -156,15 +159,16 @@
               <input type="radio" name="quest2" id="a4" value="0" />
               <label for="a3">"Soul Music" by Terry Pratchett</label>
               <div class="row justify-content-center pt-1">
-                <input type="radio" name="quest1" id="a5" value="0" />
+                <input type="radio" name="quest2" id="a5" value="0" />
                 <label for="a3"
                   >"How to Train your Dragon" by Cressida Cowell</label
                 >
               </div>
             </div>
             <div class="flex justify-center pt-5">
-              <button
-                onclick="questionThree()"
+              <button id="moveQ3"
+                type="button"
+                onclick="moveOnto3()"
                 class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
               >
                 Next Map
@@ -176,7 +180,7 @@
         <!-- question 3-->
         <div
           id="questionThree"
-          class="grid grid-cols-12 block rounded-lg bg-white"
+          class="invisible grid grid-cols-12 block rounded-lg bg-white"
         >
           <div class="container h-[60vh] col-span-12 md:col-span-8">
             <img
@@ -197,34 +201,36 @@
             </div>
             <div class="row"></div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a1" value="0" />
+              <input type="radio" name="quest3" id="a1" value="0" />
               <label for="a1" class="text-center"
                 >"Wizard of Oz" by L. Frank Baum</label
               >
             </div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a2" value="0" />
+              <input type="radio" name="quest3" id="a2" value="0" />
               <label for="a2">"The Hobbit" by JRR Tolkien</label>
             </div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a3" value="0" />
+              <input type="radio" name="quest3" id="a3" value="0" />
               <label for="a3"
                 >"The Lion, The Witch & The Wardrobe" by CS Lewis</label
               >
             </div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a4" value="0" />
+              <input type="radio" name="quest3" id="a4" value="0" />
               <label for="a3">"Soul Music" by Terry Pratchett</label>
               <div class="row justify-content-center pt-1">
-                <input type="radio" name="quest1" id="a5" value="1" />
+                <input type="radio" name="quest3" id="a5" value="1" />
                 <label for="a3"
                   >"How to Train your Dragon" by Cressida Cowell</label
                 >
               </div>
             </div>
             <div class="flex justify-center pt-5">
-              <button
-                onclick="questionFour()"
+              <button 
+                id="moveQ4"
+                type="button"
+                onclick="moveOnto4()"
                 class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
               >
                 Next Map
@@ -237,7 +243,7 @@
         <!-- question 4-->
         <div
           id="questionFour"
-          class="grid grid-cols-12 block rounded-lg bg-white"
+          class="invisible grid grid-cols-12 block rounded-lg bg-white"
         >
           <div class="container h-[60vh] col-span-12 md:col-span-8">
             <img
@@ -258,34 +264,36 @@
             </div>
             <div class="row"></div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a1" value="1" />
+              <input type="radio" name="quest4" id="a1" value="1" />
               <label for="a1" class="text-center"
                 >"Wizard of Oz" by L. Frank Baum</label
               >
             </div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a2" value="0" />
+              <input type="radio" name="quest4" id="a2" value="0" />
               <label for="a2">"The Hobbit" by JRR Tolkien</label>
             </div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a3" value="0" />
+              <input type="radio" name="quest4" id="a3" value="0" />
               <label for="a3"
                 >"The Lion, The Witch & The Wardrobe" by CS Lewis</label
               >
             </div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a4" value="0" />
+              <input type="radio" name="quest4" id="a4" value="0" />
               <label for="a3">"Soul Music" by Terry Pratchett</label>
               <div class="row justify-content-center pt-1">
-                <input type="radio" name="quest1" id="a5" value="0" />
+                <input type="radio" name="quest4" id="a5" value="0" />
                 <label for="a3"
                   >"How to Train your Dragon" by Cressida Cowell</label
                 >
               </div>
             </div>
             <div class="flex justify-center pt-5">
-              <button
-                onclick="questionFive()"
+              <button 
+                id="moveQ5"
+                type="button"
+                onclick="moveOnto5()"
                 class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
               >
                 Next Map
@@ -298,7 +306,7 @@
         <!-- question 5-->
         <div
           id="questionFive"
-          class="grid grid-cols-12 block rounded-lg bg-white"
+          class="invisible grid grid-cols-12 block rounded-lg bg-white"
         >
           <div class="container h-[60vh] col-span-12 md:col-span-8">
             <img
@@ -319,41 +327,52 @@
             </div>
             <div class="row"></div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a1" value="0" />
+              <input type="radio" name="quest5" id="a1" value="0" />
               <label for="a1" class="text-center"
                 >"Wizard of Oz" by L. Frank Baum</label
               >
             </div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a2" value="0" />
+              <input type="radio" name="quest5" id="a2" value="0" />
               <label for="a2">"The Hobbit" by JRR Tolkien</label>
             </div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a3" value="0" />
+              <input type="radio" name="quest5" id="a3" value="0" />
               <label for="a3"
                 >"The Lion, The Witch & The Wardrobe" by CS Lewis</label
               >
             </div>
             <div class="row justify-content-center pt-1">
-              <input type="radio" name="quest2" id="a4" value="1" />
+              <input type="radio" name="quest5" id="a4" value="1" />
               <label for="a3">"Soul Music" by Terry Pratchett</label>
               <div class="row justify-content-center pt-1">
-                <input type="radio" name="quest1" id="a5" value="0" />
+                <input type="radio" name="quest5" id="a5" value="0" />
                 <label for="a3"
                   >"How to Train your Dragon" by Cressida Cowell</label
                 >
               </div>
             </div>
             <div class="flex justify-center pt-5">
-              <button
-                onclick="quizResult()"
+              <button 
+                id="moveResults"
+                type="button"
+                onclick="moveOntoResults()"
                 class="flex items-center rounded bg-rose-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-rose-400"
               >
                 Next Map
               </button>
             </div>
           </div>
-        </div>        
+        </div>     
+        
+        
+        <!--Results-->
+        <div id="results" class=" invisible mx-auto">
+          <h5 class="mb-2 text-lg md:text-xl font-semibold md:font-bold">Results:</h2>
+          <br /><br />
+          <p class="text-center" id="result"></p>
+        </div>
+
 
       </form>
     </main>
