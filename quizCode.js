@@ -1,39 +1,63 @@
-function questionOne() {
-    document.getElementById("questionOne").style.display = "flex";
-    document.getElementById("questionTwo").style.display = "none";
-    document.getElementById("questionThree").style.display = "none";
-    document.getElementById("questionFour").style.display = "none";
-    document.getElementById("questionFive").style.display = "none";
-  }
 
-function questionTwo() {
-    document.getElementById("questionOne").style.display = "none";
-    document.getElementById("questionTwo").style.display = "flex"
-    document.getElementById("questionThree").style.display = "none";
-    document.getElementById("questionFour").style.display = "none";
-    document.getElementById("questionFive").style.display = "none";
-  }
 
-function questionThree() {
-    document.getElementById("questionOne").style.display = "none";
-    document.getElementById("questionTwo").style.display = "none";
-    document.getElementById("questionThree").style.display = "flex";
-    document.getElementById("questionFour").style.display = "none";
-    document.getElementById("questionFive").style.display = "none";
+
+// let element = document.getElementById(id);
+
+// document.getElementById("moveQ1").addEventListener("click", moveOnto1);
+
+const moveOnto1 = () => {
+  let element = document.getElementById("questionOne");
+  element.classList.toggle("invisible");
+  document.getElementById("intro").style.display="none";
+  
 }
 
-function questionFour() {
-    document.getElementById("questionOne").style.display = "none";
-    document.getElementById("questionTwo").style.display = "none";
-    document.getElementById("questionThree").style.display = "none";
-    document.getElementById("questionFour").style.display = "flex";
-    document.getElementById("questionFive").style.display = "none";
+const moveOnto2 = () => {
+  let element = document.getElementById("questionTwo");
+  element.classList.toggle("invisible");
+  document.getElementById("questionOne").style.display="none";
+  
+  
 }
 
-function questionFive() {
-    document.getElementById("questionOne").style.display = "none";
-    document.getElementById("questionTwo").style.display = "none";
-    document.getElementById("questionThree").style.display = "none";
-    document.getElementById("questionFour").style.display = "none";
-    document.getElementById("questionFive").style.display = "flex";
+const moveOnto3= () => {
+  let element = document.getElementById("questionThree");
+  element.classList.toggle("invisible");
+  document.getElementById("questionTwo").style.display="none";
+  
+  
 }
+
+const moveOnto4 = () => {
+  let element = document.getElementById("questionFour");
+  element.classList.toggle("invisible");
+  document.getElementById("questionThree").style.display="none";
+  
+  
+}
+
+const moveOnto5 = () => {
+  let element = document.getElementById("questionFive");
+  element.classList.toggle("invisible");
+  document.getElementById("questionFour").style.display="none";
+  
+  
+}
+
+const moveOntoResults = () => {
+  let element = document.getElementById("results");
+  element.classList.toggle("invisible");
+  document.getElementById("questionFive").style.display="none";
+  
+  
+}
+
+// Results 
+
+
+// const price = 50;
+// const discountPer = 30;
+// const discountPrice = (price, discountPer) => {
+//   return price - (discountPer / 100) * price;
+// };
+// console.log(discountPrice(price, discountPer));
