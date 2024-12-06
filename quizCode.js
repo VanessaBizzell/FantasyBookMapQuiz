@@ -41,6 +41,10 @@ const calculateScore = () => {
       score = score + Number(radioButton.value);
     }
   }
-
-  document.getElementById("score").innerHTML = "Your score is " + score + "/5";
+  if (score >= 3) {
+    msg = "You nailed it - congratulations!"}
+  else if (score <3) {msg = "Good Try!"} 
+  document.getElementById("score").innerHTML = "Your score is " + score + "/5 " + msg
 };
+
+
