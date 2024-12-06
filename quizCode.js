@@ -42,7 +42,7 @@ const calculateScore = () => {
     }
   }
   if (score >= 3) {
-    msg = "You nailed it - congratulations!"}
+    msg = "You nailed it - Congratulations!"}
   else if (score <3) {msg = "Good Try!"} 
   document.getElementById("score").innerHTML = "Your score is " + score + "/5 " + msg
 };
